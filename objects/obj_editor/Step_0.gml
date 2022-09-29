@@ -97,3 +97,10 @@ if (keyboard_check_pressed(vk_down)) {
 if (keyboard_check_pressed(vk_tab) ) display_all_heights = !display_all_heights;
 
 #endregion
+
+#region SAVE / LOAD / CREATE NEW / DELETE CURRENT MAP
+
+//Save map
+if (keyboard_check_pressed(vk_f5) ) battle_map_list[| current_map_number] = scr_save_map(current_map_number, ds_terrain_data);
+
+#endregion

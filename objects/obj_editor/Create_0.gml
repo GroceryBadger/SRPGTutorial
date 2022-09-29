@@ -68,4 +68,7 @@ current_sprite = global.cell_sprites[current_part];
 
 display_all_heights = true;
 
+current_map_number = 0; //Which map "number are we editing?
+battle_map_list = ds_list_create(); //This will hold the string that convert into a grid with each cell
+
 #endregion
