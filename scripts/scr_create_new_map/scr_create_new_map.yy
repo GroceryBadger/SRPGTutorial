@@ -6,7 +6,7 @@
     "path": "folders/Scripts/EDITOR SCRIPTS.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_save_map",
+  "name": "scr_create_new_map",
   "tags": [],
   "resourceType": "GMScript",
 }

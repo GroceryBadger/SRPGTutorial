@@ -1,5 +1,5 @@
-for(var yy = 0; yy < vcells; yy ++){
-	for(var xx = 0; xx < hcells; xx ++){
+for(var yy = 0; yy < ds_grid_height(ds_terrain_data); yy ++){
+	for(var xx = 0; xx < ds_grid_width(ds_terrain_data); xx ++){
 		
 		#region DRAW CELL
 		

@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "EDITOR SCRIPTS",
-    "path": "folders/Scripts/EDITOR SCRIPTS.yy",
+    "name": "GAME SCRIPTS",
+    "path": "folders/Scripts/GAME SCRIPTS.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_save_map",
+  "name": "scr_save_game_data",
   "tags": [],
   "resourceType": "GMScript",
 }

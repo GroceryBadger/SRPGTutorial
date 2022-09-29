@@ -1,13 +1,17 @@
 {
   "resources": [
-    {"id":{"name":"scr_load_map","path":"scripts/scr_load_map/scr_load_map.yy",},"order":1,},
+    {"id":{"name":"scr_load_map","path":"scripts/scr_load_map/scr_load_map.yy",},"order":2,},
     {"id":{"name":"spr_iso_cursor","path":"sprites/spr_iso_cursor/spr_iso_cursor.yy",},"order":1,},
     {"id":{"name":"spr_cursor","path":"sprites/spr_cursor/spr_cursor.yy",},"order":1,},
     {"id":{"name":"spr_floor","path":"sprites/spr_floor/spr_floor.yy",},"order":0,},
     {"id":{"name":"obj_editor","path":"objects/obj_editor/obj_editor.yy",},"order":0,},
-    {"id":{"name":"scr_save_map","path":"scripts/scr_save_map/scr_save_map.yy",},"order":0,},
+    {"id":{"name":"scr_save_map","path":"scripts/scr_save_map/scr_save_map.yy",},"order":3,},
     {"id":{"name":"spr_iso_decoration","path":"sprites/spr_iso_decoration/spr_iso_decoration.yy",},"order":3,},
     {"id":{"name":"spr_iso_width_height","path":"sprites/spr_iso_width_height/spr_iso_width_height.yy",},"order":2,},
+    {"id":{"name":"scr_save_game_data","path":"scripts/scr_save_game_data/scr_save_game_data.yy",},"order":1,},
+    {"id":{"name":"scr_create_new_map","path":"scripts/scr_create_new_map/scr_create_new_map.yy",},"order":0,},
+    {"id":{"name":"scr_delete_map","path":"scripts/scr_delete_map/scr_delete_map.yy",},"order":1,},
+    {"id":{"name":"scr_load_game_data","path":"scripts/scr_load_game_data/scr_load_game_data.yy",},"order":0,},
     {"id":{"name":"spr_iso_floor","path":"sprites/spr_iso_floor/spr_iso_floor.yy",},"order":0,},
     {"id":{"name":"rm_editor","path":"rooms/rm_editor/rm_editor.yy",},"order":1,},
   ],
@@ -44,6 +48,8 @@
     {"folderPath":"folders/Extensions.yy","order":14,"resourceVersion":"1.0","name":"Extensions","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/2D.yy","order":1,"resourceVersion":"1.0","name":"2D","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/ISOMETRIC.yy","order":2,"resourceVersion":"1.0","name":"ISOMETRIC","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/EDITOR SCRIPTS.yy","order":4,"resourceVersion":"1.0","name":"EDITOR SCRIPTS","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/GAME SCRIPTS.yy","order":5,"resourceVersion":"1.0","name":"GAME SCRIPTS","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},
@@ -51,7 +57,9 @@
   "TextureGroups": [
     {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"targets":461609314234257646,"resourceVersion":"1.0","name":"Default","resourceType":"GMTextureGroup",},
   ],
-  "IncludedFiles": [],
+  "IncludedFiles": [
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"battle_map_strings.ini","resourceType":"GMIncludedFile",},
+  ],
   "MetaData": {
     "IDEVersion": "2.3.0.529",
   },

@@ -70,5 +70,8 @@ display_all_heights = true;
 
 current_map_number = 0; //Which map "number are we editing?
 battle_map_list = ds_list_create(); //This will hold the string that convert into a grid with each cell
+total_maps = 0;
 
 #endregion
+
+scr_load_game_data();
