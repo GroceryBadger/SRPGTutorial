@@ -60,7 +60,7 @@ enum e_stats {
 	last,	
 }
 
-global.character_stats = load_csv("classes_and_character.csv");
+global.character_stats = load_csv("classes_and_characters.csv");
 
 #region SETUP THE SPRITE GRID
 

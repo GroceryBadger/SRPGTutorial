@@ -13,6 +13,7 @@
     {"id":{"name":"spr_iso_davos","path":"sprites/spr_iso_davos/spr_iso_davos.yy",},"order":17,},
     {"id":{"name":"spr_iso_knight","path":"sprites/spr_iso_knight/spr_iso_knight.yy",},"order":7,},
     {"id":{"name":"spr_iso_decoration","path":"sprites/spr_iso_decoration/spr_iso_decoration.yy",},"order":1,},
+    {"id":{"name":"spr_iso_spawn_tiles","path":"sprites/spr_iso_spawn_tiles/spr_iso_spawn_tiles.yy",},"order":4,},
     {"id":{"name":"spr_iso_mage","path":"sprites/spr_iso_mage/spr_iso_mage.yy",},"order":4,},
     {"id":{"name":"spr_iso_butz","path":"sprites/spr_iso_butz/spr_iso_butz.yy",},"order":14,},
     {"id":{"name":"spr_iso_width_height","path":"sprites/spr_iso_width_height/spr_iso_width_height.yy",},"order":3,},

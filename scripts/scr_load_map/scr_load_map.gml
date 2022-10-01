@@ -21,15 +21,22 @@ function scr_load_map(map_number, grid_to_copy_to, list_of_battle_maps){
 	
 		ds_grid_resize(grid_to_copy_to, grid_width, grid_height);
 		
+		unique_conversation_index = 0; //This will hold the highest valued conversation index
+		
 		//Convert the strings into lists holding data and store that list in the relevant cell of grid_to_copy_to
 		for (var yy = 0; yy < grid_height; yy ++) {
 			for (var xx = 0; xx < grid_width; xx ++) {
+				
 				var list = ds_list_create();
 				var list_str = grid_to_copy_from[# xx, yy];
 				ds_list_read(list, list_str);
 				
 				grid_to_copy_to[# xx, yy] = list;
 				show_debug_message(list);
+				
+				//Check for a higher-value conversation index
+				var con_in = list[| e_tile_data.conversation_index];
+				if (con_in != undefined) && con_in > unique_conversation_index unique_conversation_index = con_in;
 			}
 		}
 	

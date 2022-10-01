@@ -7,6 +7,13 @@ enum e_tile_data {
 	floor_index,
 	decoration_index,
 	height,
+	spawn_tile,               //-1 for no spawn, 0 is player 1 is enemy
+	conversation_index,       //Each spawn tile will have a unique conversation per map
+	unit,                     //Either a class or a spacial character
+	unit_facing,              //West/North/East/South
+	is_ai_controlled,         //True/False
+	must_survive_this_battle, //True/False If true, if this unit dies it's game over
+	kill_this_unit_to_win,    //True/False By killing this unit, the battle is won
 	last,
 
 }
@@ -31,6 +38,7 @@ for (var yy = 0; yy < vcells; yy ++) {
 		//Set initial cell data for each list
 		for (var i = 0; i < e_tile_data.last; i++) {
 			if(i == e_tile_data.floor_index) list[| i] = 1; else list[| i] = 0;	
+			if(i >= e_tile_data.spawn_tile) list[| i] = -1;
 		}
 		
 		ds_terrain_data[# xx, yy] = list;
@@ -71,6 +79,25 @@ display_all_heights = true;
 current_map_number = 0; //Which map "number are we editing?
 battle_map_list = ds_list_create(); //This will hold the string that convert into a grid with each cell
 total_maps = 0;
+
+#region MISSION EDITOR
+
+mouse_sprite = -1; //Is the mouse holding a sprite or not
+mouse_index = 0; //Index of the sprite that the mouse is to display
+unique_conversation_index = 0; //This number inceases every time a spawn tile is put down. The number does not decrease if a spawn tile is deleted
+
+#endregion
+
+#endregion
+
+#region EDITING STATES
+
+enum e_editing_states {
+	map, 
+	mission,
+}
+
+editing_state = e_editing_states.mission;
 
 #endregion
 
