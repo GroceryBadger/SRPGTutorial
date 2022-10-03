@@ -1,3 +1,5 @@
+#region character_enums + grid
+
 enum e_facing {
 	west, 
 	north, 
@@ -62,6 +64,15 @@ enum e_stats {
 
 global.character_stats = load_csv("classes_and_characters.csv");
 
+#endregion
+
+#region SETUP SPRITE ARRAY
+
+global.cell_sprites[e_tile_data.floor_index] = spr_iso_floor;
+global.cell_sprites[e_tile_data.decoration_index] = spr_iso_decoration;
+
+#endregion
+
 #region SETUP THE SPRITE GRID
 
 //Animations for the character
@@ -88,5 +99,34 @@ global.ac_spr[# e_actor_sprites.stationary, e_characters.butz] = spr_iso_butz;
 global.ac_spr[# e_actor_sprites.stationary, e_characters.sarah] = spr_iso_sarah;
 global.ac_spr[# e_actor_sprites.stationary, e_characters.brian] = spr_iso_brian;
 global.ac_spr[# e_actor_sprites.stationary, e_characters.davos] = spr_iso_davos;
+
+#endregion
+
+#region SETUP MISSIONS
+
+enum e_mission_params {
+	map,
+	conversation_csv,
+	last,
+}
+
+global.mission_grid = ds_grid_create(e_mission_params.last, 3);
+
+global.mission_grid[# e_mission_params.map, 0] = 0; //Store the index of the map we want to load for a mission
+global.mission_grid[# e_mission_params.conversation_csv, 0] = "conversation_1.csv";
+
+#endregion
+
+#region STATES
+
+enum e_game_states {
+	editing,
+	testing,
+}
+
+game_state = e_game_states.testing;
+
+if (game_state == e_game_states.editing) room_goto(rm_editor);
+if (game_state == e_game_states.testing) room_goto(rm_testing);
 
 #endregion

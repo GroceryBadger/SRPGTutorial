@@ -65,13 +65,6 @@ grid_y = clamp(grid_y, 0, ds_grid_height(ds_terrain_data) - 1);
 
 #region PAINT THE MAP / PLACE UNIT / SPAWN TILE
 
-//if (mouse_check_button(mb_left)) {
-//	//ds_terrain_data[# grid_x, grid_y] = new_index;	
-//	var list = ds_terrain_data[# grid_x, grid_y];
-//	list[| current_part] = new_index;
-//	list[| e_tile_data.height] = current_height;
-//}
-
 if (mouse_check_button(mb_left)) {
 	
 	var list = ds_terrain_data[# grid_x, grid_y];

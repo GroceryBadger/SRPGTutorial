@@ -49,11 +49,6 @@ for (var yy = 0; yy < vcells; yy ++) {
 
 #endregion
 
-#region SETUP SPRITE ARRAY
-
-global.cell_sprites[e_tile_data.floor_index] = spr_iso_floor;
-global.cell_sprites[e_tile_data.decoration_index] = spr_iso_decoration;
-#endregion
 
 #region EXTRA VARIABLES
 
