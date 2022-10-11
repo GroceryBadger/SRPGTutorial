@@ -1,4 +1,4 @@
-//Go to the next entry of the converation
+//Go to the next entry of the conversation
 if (keyboard_check_pressed(vk_enter)) {
 	if (conversation_entry + 1) < ds_grid_height(conversation)	 {
 		conversation_entry ++;

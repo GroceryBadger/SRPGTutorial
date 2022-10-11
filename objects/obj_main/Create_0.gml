@@ -124,7 +124,7 @@ enum e_game_states {
 	testing,
 }
 
-game_state = e_game_states.testing;
+game_state = e_game_states.editing;
 
 if (game_state == e_game_states.editing) room_goto(rm_editor);
 if (game_state == e_game_states.testing) room_goto(rm_testing);

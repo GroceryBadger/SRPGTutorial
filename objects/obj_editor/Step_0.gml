@@ -379,7 +379,9 @@ if (ds_list_size(battle_map_list) > 0) {
 }
 
 //Create new map
-if (keyboard_check_pressed(vk_enter) ) scr_create_new_map(battle_map_list, ds_terrain_data);
+if (keyboard_check_pressed(vk_enter) ) {
+	scr_create_new_map(battle_map_list, ds_terrain_data);
+}
 
 //Delete the map
 if (keyboard_check_pressed(vk_backspace) ) {

@@ -13,16 +13,16 @@ for (var yy = 0; yy < ds_grid_height(ds_terrain_data); yy ++) {
 		unit_facing = list[| e_tile_data.unit_facing];
 		con_index = list[| e_tile_data.conversation_index];
 		
-		draw_x = (xx = yy) * (iso_width / 2);
+		draw_x = (xx - yy) * (iso_width / 2);
 		
 		//Draw a tile for every level of the cell, a cell with a height of "3" would mean this loop get run 4 time (0, 1, 2, 3) per step
 		for (var draw_height = 0; draw_height <= height; draw_height ++) {
 			
 			//If we don't want to display all height, only draw cells UP TO current_height OR draw cells to their proper height if display_all_heights equals true
 			if (display_all_heights == false && draw_height <= current_height) || (display_all_heights == true) {
-				draw_y = (xx + yy) * (iso_height / 2) - (draw_height * ( iso_height /2 ));	
+				draw_y = (xx + yy) * (iso_height / 2) - (draw_height * ( iso_height / 2 ));	
 				
-				//We'll make a color and sabe it in "col" and use it to affect the color of whatever tile is drawn - this will make the different heights clearer
+				//We'll make a color and save it in "col" and use it to affect the color of whatever tile is drawn - this will make the different heights clearer
 				var rgb_value = 150 + (draw_height * 9);
 				var col = make_color_rgb( rgb_value, rgb_value, rgb_value);
 				draw_sprite_ext(spr_iso_floor, floor_ind, draw_x, draw_y, 1, 1, 0, col, 1);

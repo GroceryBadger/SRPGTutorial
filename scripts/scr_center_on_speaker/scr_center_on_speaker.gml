@@ -1,6 +1,7 @@
 function scr_center_on_speaker(speaker, grid){
 	for (var yy = 0; yy < ds_grid_height(grid); yy ++) {
-		for (var xx = 0; xx < ds_grid_width(grid); x ++) {
+		for (var xx = 0; xx < ds_grid_width(grid); xx ++) {
+			
 			var list = grid[# xx, yy];
 			var con_in = list[| e_tile_data.conversation_index];
 			
@@ -14,7 +15,7 @@ function scr_center_on_speaker(speaker, grid){
 				cx = (xx - yy) * (iso_width / 2);
 				cy = (xx + yy) * (iso_width / 2) - (draw_height * (iso_height / 2));
 				
-				camera_set_view_pos(view_camera[0], cx - ( camera_get_view_width(view_camera[0]) / 2), cy - ( camera_get_view_height(view_camera[0]) / 2));
+				camera_set_view_pos(view_camera[0], cx - ( camera_get_view_width(view_camera[0]) / 2), cy - ( camera_get_view_height(view_camera[0]) / 2) );
 				
 				show_debug_message("FOUND SPEAKER: " + string(xx) + "/" + string(yy));
 				
