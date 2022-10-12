@@ -13,7 +13,7 @@ function scr_center_on_speaker(speaker, grid){
 				show_debug_message("unit: " + string(unit));
 				
 				cx = (xx - yy) * (iso_width / 2);
-				cy = (xx + yy) * (iso_width / 2) - (draw_height * (iso_height / 2));
+				cy = (xx + yy) * (iso_height / 2) - (draw_height * (iso_height / 2));
 				
 				camera_set_view_pos(view_camera[0], cx - ( camera_get_view_width(view_camera[0]) / 2), cy - ( camera_get_view_height(view_camera[0]) / 2) );
 				

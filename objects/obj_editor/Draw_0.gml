@@ -12,7 +12,7 @@ for(var yy = 0; yy < ds_grid_height(ds_terrain_data); yy ++){
 		con_index = list[| e_tile_data.conversation_index];
 
 		//Isometric draw x,y
-		draw_x = (xx - yy) * (iso_width/2);
+		draw_x = (xx - yy) * (iso_width / 2);
 
 		//Draw a tile for EVERY level of the cell
 		for (var draw_height = 0; draw_height <= height; draw_height ++) {
@@ -63,24 +63,6 @@ for(var yy = 0; yy < ds_grid_height(ds_terrain_data); yy ++){
 				}
 			}
 		}
-		
-		#region TESTING - show the numbers
-		
-		////2D numbers
-		////draw_set_halign(fa_left);
-		////draw_set_valign(fa_top);
-		
-		////Isometric numbers
-		//draw_set_halign(fa_center);
-		//draw_set_valign(fa_middle);
-		
-		//draw_set_colour(c_gray);
-		////draw_text(draw_x, draw_y, string(floor_ind));
-		
-		//var list = ds_terrain_data[# xx, yy];
-		//draw_text(draw_x, draw_y, string(list));
-		
-		#endregion
 		
 		#endregion
 		

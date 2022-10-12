@@ -370,7 +370,7 @@ if (ds_list_size(battle_map_list) > 0) {
 		else {
 			if (keyboard_check_pressed(ord("E"))) {
 				if (current_map_number + 1) < ds_list_size(battle_map_list) current_map_number ++;
-				else current_map_number = 0;
+				else current_map_number = 0; 
 				
 				scr_load_map(current_map_number, ds_terrain_data, battle_map_list);
 			}

@@ -13,12 +13,17 @@ function scr_create_new_map(list_of_battle_maps, grid_to_reset){
 			//Clear each list	
 			var list = grid_to_reset[# xx, yy];
 			
-			//If it's the floor, set the value to 1, else set it to 0 - Reset the grid
-			for (var i = 0; i < e_tile_data.last; i ++) {
-				if(i == 0) list[| i] = 1; else list[| i] = 0;				
+			//Set initial cell data for each list
+			for (var i = 0; i < e_tile_data.last; i ++){
+				//set floor_index to 1 and everything else to 0
+				if (i == e_tile_data.floor_index) list[| i] = 1; else list[| i] = 0;
+				if (i >= e_tile_data.spawn_tile) list[| i] = -1;																	    
 			}
 		}
 	}
-	
+
+	//We want to reset this variable if we make a new map
+	unique_conversation_index = 0;																										
+
 	show_debug_message("New map created");
 }

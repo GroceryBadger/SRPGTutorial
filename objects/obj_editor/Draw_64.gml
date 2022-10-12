@@ -9,7 +9,7 @@ if (editing_state == e_editing_states.map)
 	//draw_sprite_ext(spr_floor, new_index, draw_x, draw_y, scale, scale, 0, c_white, 1);
 	var spr = global.cell_sprites[current_part];
 
-	draw_sprite_ext(spr, new_index, draw_x, draw_y, scale, scale, 0 , c_white, 1);
+	draw_sprite_ext(spr, new_index, draw_x, draw_y, scale, scale, 0, c_white, 1);
 }
 
 #endregion

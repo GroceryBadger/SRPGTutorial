@@ -14,8 +14,7 @@ enum e_tile_data {
 	is_ai_controlled,         //True/False
 	must_survive_this_battle, //True/False If true, if this unit dies it's game over
 	kill_this_unit_to_win,    //True/False By killing this unit, the battle is won
-	last,
-
+	last
 }
 
 #endregion
