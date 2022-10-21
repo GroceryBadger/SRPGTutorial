@@ -59,11 +59,11 @@ if (editing_state == e_editing_states.mission) {
 	
 	#region DRAW character
 	
-	var spr_w = sprite_get_width(spr_iso_actor) * draw_scale;
-	var spr_h = sprite_get_height(spr_iso_actor) * draw_scale;
+	var spr_w = sprite_get_width(spr_iso_actor_idle_w) * draw_scale;
+	var spr_h = sprite_get_height(spr_iso_actor_idle_w) * draw_scale;
 	
 	draw_x = sprite_get_width(spr_iso_spawn_tiles) * 6;
-	draw_y = display_get_gui_height() - sprite_get_height(spr_iso_actor);
+	draw_y = display_get_gui_height() - sprite_get_height(spr_iso_actor_idle_w);
 	
 	var mx = device_mouse_x_to_gui(0);
 	var my = device_mouse_y_to_gui(0);
@@ -71,13 +71,13 @@ if (editing_state == e_editing_states.mission) {
 	if (abs(mx - draw_x) <= (spr_w /2) && abs(my - draw_y) <= (spr_h / 2) ) {
 		col = c_ltgray;
 		if (mouse_check_button_pressed(mb_left)) {
-			mouse_sprite = spr_iso_actor;
+			mouse_sprite = spr_iso_actor_idle_w;
 			mouse_index = e_facing.south;
 		}
 	}
 	else col = c_white;
 	
-	draw_sprite_ext(spr_iso_actor, e_facing.south, draw_x, draw_y, draw_scale, draw_scale, 0, col, 1);
+	draw_sprite_ext(spr_iso_actor_idle_w, e_facing.south, draw_x, draw_y, draw_scale, draw_scale, 0, col, 1);
 	
 	#endregion
 	

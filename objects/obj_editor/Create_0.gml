@@ -91,7 +91,7 @@ enum e_editing_states {
 	mission,
 }
 
-editing_state = e_editing_states.mission;
+editing_state = e_editing_states.map;
 
 #endregion
 

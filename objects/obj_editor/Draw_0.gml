@@ -44,8 +44,11 @@ for(var yy = 0; yy < ds_grid_height(ds_terrain_data); yy ++){
 					//UNIT
 					if (unit != undefined && unit >= e_characters.fighter) {
 						//DRAW UNIT
-						var spr = global.ac_spr[# e_actor_sprites.stationary, unit];
-						draw_sprite_ext(spr, unit_facing, draw_x, draw_y, 1, 1, 0, ed_col, 1);
+						var char_grid = global.character_stats[| unit];
+						var spr = char_grid[# e_actor_sprites.idle, unit_facing];
+						
+						//Can use the index (0) to animate
+						draw_sprite_ext(spr, 0, draw_x, draw_y, 1, 1, 0, ed_col, 1);
 						
 						//DRAW UNIT name
 						draw_set_halign(fa_center);
@@ -53,10 +56,10 @@ for(var yy = 0; yy < ds_grid_height(ds_terrain_data); yy ++){
 						//var name = global.character_stats[# e_stats.name, unit]; //Full Name
 						var name = string_copy(global.character_stats[# e_stats.name, unit], 1, 2); // First 2 characters of name
 						
-						draw_text(draw_x, draw_y - sprite_get_height(spr_iso_actor), name);
+						draw_text(draw_x, draw_y - sprite_get_height(spr_iso_actor_idle_w), name);
 						
 						//Show unique conversation index for the spawn tile
-						draw_text(draw_x, draw_y - (sprite_get_height(spr_iso_actor) + 14), string(con_index));
+						draw_text(draw_x, draw_y - (sprite_get_height(spr_iso_actor_idle_w) + 14), string(con_index));
 					}
 					
 					#endregion

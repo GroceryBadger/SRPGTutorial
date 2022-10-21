@@ -10,22 +10,22 @@ enum e_facing {
 //This is a reflection of the csv file
 enum e_characters {
 	leave_empty,
-	fighter,
 	archer,
-	mage,
-	priest,
-	warrior,
-	knight,
-	ranger,
-	sniper,
-	wizard,
-	sorcerer,
-	healer,
-	monk,
-	butz,
-	sarah,
 	brian,
+	butz,
 	davos,
+	fighter,
+	healer,
+	knight,
+	mage,
+	monk,
+	priest,
+	ranger,
+	sarah,
+	sniper,
+	sorcerer,
+	warrior,
+	wizard,
 	last,
 }
 
@@ -77,28 +77,26 @@ global.cell_sprites[e_tile_data.decoration_index] = spr_iso_decoration;
 
 //Animations for the character
 enum e_actor_sprites {
-	stationary,
+	idle,
 	last,
 }
 
-global.ac_spr = ds_grid_create(e_actor_sprites.last, e_characters.last);
+global.char_sprite_grids = ds_list_create();
+sprite_count = 0;
 
-global.ac_spr[# e_actor_sprites.stationary, e_characters.fighter] = spr_iso_fighter;
-global.ac_spr[# e_actor_sprites.stationary, e_characters.archer] = spr_iso_archer;
-global.ac_spr[# e_actor_sprites.stationary, e_characters.mage] = spr_iso_mage;
-global.ac_spr[# e_actor_sprites.stationary, e_characters.priest] = spr_iso_priest;
-global.ac_spr[# e_actor_sprites.stationary, e_characters.warrior] = spr_iso_warrior;
-global.ac_spr[# e_actor_sprites.stationary, e_characters.knight] = spr_iso_knight;
-global.ac_spr[# e_actor_sprites.stationary, e_characters.ranger] = spr_iso_ranger;
-global.ac_spr[# e_actor_sprites.stationary, e_characters.sniper] = spr_iso_sniper;
-global.ac_spr[# e_actor_sprites.stationary, e_characters.wizard] = spr_iso_wizard;
-global.ac_spr[# e_actor_sprites.stationary, e_characters.sorcerer] = spr_iso_sorcerer;
-global.ac_spr[# e_actor_sprites.stationary, e_characters.healer] = spr_iso_healer;
-global.ac_spr[# e_actor_sprites.stationary, e_characters.monk] = spr_iso_monk;
-global.ac_spr[# e_actor_sprites.stationary, e_characters.butz] = spr_iso_butz;
-global.ac_spr[# e_actor_sprites.stationary, e_characters.sarah] = spr_iso_sarah;
-global.ac_spr[# e_actor_sprites.stationary, e_characters.brian] = spr_iso_brian;
-global.ac_spr[# e_actor_sprites.stationary, e_characters.davos] = spr_iso_davos;
+for (var character = 0; character < e_characters.last; character ++)
+{
+	var grid = ds_grid_create(e_actor_sprites.last, e_characters.last);
+
+	for(var dir = 0; dir < 4; dir ++)
+	{
+		grid[# e_actor_sprites.idle, dir] = sprite_count;
+		sprite_count ++;
+
+	}
+	
+	global.char_sprite_grids[| character] = grid;
+}
 
 #endregion
 
@@ -122,11 +120,13 @@ global.mission_grid[# e_mission_params.conversation_csv, 0] = "conversation_1.cs
 enum e_game_states {
 	editing,
 	testing,
+	game,
 }
 
-game_state = e_game_states.editing;
+game_state = e_game_states.game;
 
 if (game_state == e_game_states.editing) room_goto(rm_editor);
 if (game_state == e_game_states.testing) room_goto(rm_testing);
+if (game_state == e_game_states.game) room_goto(rm_world_map);
 
 #endregion

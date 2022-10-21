@@ -96,8 +96,8 @@ if (mouse_check_button(mb_left)) {
 			
 			else {
 				//Only allow unit placement if there is a spawn tile already there
-				if (mouse_sprite == spr_iso_actor) && (list[| e_tile_data.spawn_tile] != undefined && list[| e_tile_data.spawn_tile] > -1) {
-					
+				//if (mouse_sprite == spr_iso_actor) && (list[| e_tile_data.spawn_tile] != undefined && list[| e_tile_data.spawn_tile] > -1) {
+				if (mouse_sprite == spr_iso_actor_idle_w) && (list[| e_tile_data.spawn_tile] != undefined && list[| e_tile_data.spawn_tile] > -1) {
 					//Update unit entry
 					list[| e_tile_data.unit] = e_characters.fighter;
 					list[| e_tile_data.unit_facing] = mouse_index;
@@ -150,8 +150,13 @@ if (editing_state == e_editing_states.mission) {
 	
 	if (mouse_wheel_down() ) {
 		//Rotate
-		if (mouse_sprite == spr_iso_actor) {
-			if (mouse_index + 1) < sprite_get_number(spr_iso_actor) mouse_index ++; else mouse_index = 0;	
+		//if (mouse_sprite == spr_iso_actor) {
+		//	if (mouse_index + 1) < sprite_get_number(spr_iso_actor) mouse_index ++; else mouse_index = 0;	
+		//}
+		if (mouse_sprite == spr_iso_actor_idle_w) 
+		{
+			if (mouse_index + 1) < 4 mouse_index ++;
+			else mouse_index = 0;
 		}
 		//Change class/character
 		if (mouse_sprite == -1 && class != undefined && class > 0) {
@@ -162,10 +167,15 @@ if (editing_state == e_editing_states.mission) {
 	
 	if (mouse_wheel_up() ) {
 		//Rotate
-		if (mouse_sprite == spr_iso_actor) {
+		//if (mouse_sprite == spr_iso_actor) {
+		//	if (mouse_index > 0) mouse_index --;
+		//	else mouse_index = sprite_get_number(spr_iso_actor) -1;
+		//}
+		if (mouse_sprite == spr_iso_actor_idle_w) {
 			if (mouse_index > 0) mouse_index --;
-			else mouse_index = sprite_get_number(spr_iso_actor) -1;
+			else mouse_index = 3;
 		}
+		
 		//Change class/character
 		if (mouse_sprite == -1 && class != undefined && class > 0) {
 			if (class > e_characters.fighter) list[| e_tile_data.unit] --;

@@ -42,8 +42,10 @@ for (var yy = 0; yy < ds_grid_height(ds_terrain_data); yy ++) {
 					if (unit != undefined && unit >= e_characters.fighter) {
 						
 						//DRAW UNIT
-						var spr = global.ac_spr[# e_actor_sprites.stationary, unit];
-						draw_sprite_ext(spr, unit_facing, draw_x, draw_y, 1, 1, 0, ed_col, 1);
+						var char_grid = global.character_stats[| unit];
+						var spr = char_grid[# e_actor_sprites.idle, unit_facing];
+						
+						draw_sprite_ext(spr, 0, draw_x, draw_y, 1, 1, 0, ed_col, 1);
 						
 						//DRAW UNIT NAME
 						draw_set_halign(fa_center);
@@ -51,7 +53,7 @@ for (var yy = 0; yy < ds_grid_height(ds_terrain_data); yy ++) {
 						
 						var name = string_copy(global.character_stats[# e_stats.name, unit], 1, 2);
 						
-						draw_text(draw_x, draw_y - sprite_get_height(spr_iso_actor), name);
+						draw_text(draw_x, draw_y - sprite_get_height(spr_iso_actor_idle_w), name);
 					}
 					
 					#endregion
