@@ -58,6 +58,7 @@
     {"id":{"name":"spr_iso_warrior_idle_s","path":"sprites/spr_iso_warrior_idle_s/spr_iso_warrior_idle_s.yy",},"order":2,},
     {"id":{"name":"spr_iso_warrior_idle_e","path":"sprites/spr_iso_warrior_idle_e/spr_iso_warrior_idle_e.yy",},"order":0,},
     {"id":{"name":"scr_save_game_data","path":"scripts/scr_save_game_data/scr_save_game_data.yy",},"order":1,},
+    {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":4,},
     {"id":{"name":"spr_iso_monk_idle_s","path":"sprites/spr_iso_monk_idle_s/spr_iso_monk_idle_s.yy",},"order":2,},
     {"id":{"name":"spr_iso_spawn_tiles","path":"sprites/spr_iso_spawn_tiles/spr_iso_spawn_tiles.yy",},"order":4,},
     {"id":{"name":"spr_iso_sorcerer_idle_w","path":"sprites/spr_iso_sorcerer_idle_w/spr_iso_sorcerer_idle_w.yy",},"order":3,},
