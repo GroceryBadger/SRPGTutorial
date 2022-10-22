@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_iso_butz_idle_e",
-    "path": "sprites/spr_iso_butz_idle_e/spr_iso_butz_idle_e.yy",
+    "name": "spr_iso_actor_idle_e",
+    "path": "sprites/spr_iso_actor_idle_e/spr_iso_actor_idle_e.yy",
   },
   "solid": false,
   "visible": true,
